@@ -1,38 +1,64 @@
 var i = 0;
-function buttonClick() {
-    
-    i++;
-    document.getElementById('inc').value = i;
-
+let amount = document.getElementById("userAmount");
+function ApplebuttonClick() {
+    let money=document.getElementById("userAmount").value;
+    if(!(x > money)){
+        i++;
+    document.getElementById('ApplePlaceHolder').value = i;
+   }
 }
     
    var e = 0;
    function buttondecClick(){
-    i--;
-     document.getElementById('inc').value = i;
+    let money=document.getElementById("userAmount").value;
+    if(!(x <= 0)){
+        i--;
+        document.getElementById('ApplePlaceHolder').value = i;
+   
+    }else{
+        document.getElementById('ApplePlaceHolder').value = i;
+
+    }
+  
+
 
    }
    var x = 0;
-function oClick() {
-    
+function appleIncreasingClick() {
+    let money=document.getElementById("userAmount").value;
     x += 10;
-    document.getElementById('total').value = x;
-    
+
+    if(x>money){
+        alert('Insufficient account balance');
+    }else{  
+        document.getElementById('amountAvailiable').value = x;
+    }
+}
+function appleAmontbutton(){
+    var z = (+ApplebuttonClick())+(+appleIncreasingClick());
 
 }
-function button(){
-    var z = (+buttonClick())+(+oClick());
 
-}
-function minusClick() {
-    
+function appleMinusClick() {
     x -= 10;
-    document.getElementById('total').value = x;
+
+    let money=document.getElementById("userAmount").value;    
+    if(x <= 0){
+        alert('Insufficient account balance');
+
+    }
+    else{
+        document.getElementById('amountAvailiable').value = x;
+
+    }
+    if(!(x < 0)){
+        document.getElementById('amountAvailiable').value = x;
+    }
     
 
 }
-function minusbutton(){
-    var z = (-buttondecClick())-(-minusClick());
+function AppleMinusAmountbutton(){
+    var z = (-buttondecClick())-(-appleMinusClick());
 
 }
 // orange cost
@@ -52,26 +78,40 @@ function orangebuttonClick() {
 
    }
    var x = 0;
-function orangeClick() {
-    
+function avaliableOrangeClick() {
+    let money=document.getElementById("userAmount").value;    
     x += 15;
-    document.getElementById('total').value = x;
+    if(x>money){
+        alert('Insufficient account balance');
+    }else{  
+        document.getElementById('amountAvailiable').value = x;
+    }
     
 
 }
 function orangebutton(){
-    var z = (+orangebuttonClick())+(+orangeClick());
+    var z = (+orangebuttonClick())+(+avaliableOrangeClick());
 
 }
-function orangeminusClick() {
+function orangeAvailiableminusClick() {
     
     x -= 15;
-    document.getElementById('total').value = x;
+    if(x <= 0){
+        alert('Insufficient account balance');
+
+    }
+    else{
+        document.getElementById('amountAvailiable').value = x;
+
+    }
+    if(!(x < 0)){
+        document.getElementById('amountAvailiable').value = x;
+    }
     
 
 }
 function orangeminusbutton(){
-    var z = (-orangebuttondecClick())-(-orangeminusClick());
+    var z = (-orangebuttondecClick())-(-orangeAvailiableminusClick());
 
 }
 // banana
@@ -79,36 +119,51 @@ var i = 0;
 function bananabuttonClick() {
     
     i++;
-    document.getElementById('orangeMinus').value = i;
+    document.getElementById('banana').value = i;
 
 }
     
    var e = 0;
    function bananabuttondecClick(){
     i--;
-     document.getElementById('orangeMinus').value = i;
+     document.getElementById('banana').value = i;
 
    }
    var x = 0;
-function bananaClick() {
+function availiableBananaClick() {
+    let money=document.getElementById("userAmount").value;    
     
     x += 7;
-    document.getElementById('total').value = x;
+    if(x>money){
+        alert('Insufficient account balance');
+    }else{  
+        document.getElementById('amountAvailiable').value = x;
+    }
     
 
 }
 function bananabutton(){
-    var z = (+bananabuttonClick())+(+bananaClick());
+    var z = (+bananabuttonClick())+(+availiableBananaClick());
 
 }
 function bananaminusClick() {
     
     x -= 7;
-    document.getElementById('total').value = x;
+    if(x <= 0){
+        alert('Insufficient account balance');
+
+    }
+    else{
+        document.getElementById('amountAvailiable').value = x;
+
+    }
+    if(!(x < 0)){
+        document.getElementById('amountAvailiable').value = x;
+    }
     
 
 }
-function appleminusbutton(){
+function bananaminusbutton(){
     var z = (-bananabuttondecClick())-(-bananaminusClick());
 
 }

@@ -30,6 +30,7 @@
     outline: none;
 }
 .total {
+    flex-wrap: wrap;
     background-color: #efe2cc;
     height: 198px;
     display: flex;
@@ -115,19 +116,27 @@
     border-radius: 20px 0px 0px 20px;
     height: 38px;
     outline: none;
-
+    box-shadow: -1px 1px 5px -0px #0707078f;
     width: 30px;
     background: linear-gradient(#43484e, #5e6679,#43484e );
 
 }
+button:active {
+    box-shadow: none;
+}
 .rightBtn button {
- 
+    box-shadow: 1px 1px 5px 1px #0707078f;
+    border: 1px solid #545859;
+    border-radius: 0px 20px 20px 0px;
     height: 38px;
     width: 30px;
     outline: none;
     background: linear-gradient(#43484e, #5e6679,#43484e );
 
     
+}
+button:active {
+    box-shadow: none;
 }
 .rightBtn p {
     font-size: 20px;
